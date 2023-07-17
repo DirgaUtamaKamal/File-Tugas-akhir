@@ -1,0 +1,14 @@
+Kompilasi Open Wrt dijalan kan pada sistem operasi linux
+$ sudo apt-get update
+$ sudo apt-get -y install build-essential binutils bison autoconf gettext texinfo subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-per1 unzip ncurses
+
+#cloning openwrt menggunakan git
+$ git clone https://git.openwrt.org/openwrt/openwrt.git
+#masuk ke direktori OpenWrt
+$ cd openwrt
+$ git clone https://git.openwrt.org/openwrt/openwrt.git
+$ /scripts/feeds update -a
+
+#tambahkan source openvswitch
+$ echo ‘src-git openvswitch git://github.com/pichuang/openwrt.git’>> feeds.conf
+$ ./scripts/feeds update -a
